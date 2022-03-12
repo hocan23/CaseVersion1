@@ -10,20 +10,13 @@ import UIKit
 class MainUITaViewController: UITabBarController {
     
     var products = [Product]()
-    
-
- 
     var enter = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("çalıştı")
        
-        
-        
-        
-        
-        
         if enter == 0 {
             enter += 1
             //demek ki oturumu açan herhangi bir kullanıcı yok
@@ -37,26 +30,17 @@ class MainUITaViewController: UITabBarController {
             return
         }
         designPage()
-        
-     
-
-
-     
+   
     }
    
     
     func designPage() {
-//
         let araNavController = navControllerOlustur(seciliOlmayanIkon: #imageLiteral(resourceName: "Ana_Ekran_Secili_Degil"), seciliIkon: #imageLiteral(resourceName: "Ana_Ekran_Secili"),rootViewController: ProductViewController())
 
-        
-        
         let ekleNavController = navControllerOlustur(seciliOlmayanIkon: #imageLiteral(resourceName: "Begeni_Secili_Degil"), seciliIkon: #imageLiteral(resourceName: "Begeni_Secili"))
         
         let begeniNavController = navControllerOlustur(seciliOlmayanIkon: #imageLiteral(resourceName: "Profil"), seciliIkon: #imageLiteral(resourceName: "Profil_Secili"))
         
-        
-               
         viewControllers = [araNavController, ekleNavController,begeniNavController]
         
         guard let itemlar = tabBar.items else { return }
