@@ -10,11 +10,3 @@ struct Product: Codable {
     
 }
 
-
-
-// MARK: - Rating
-struct Rating: Codable {
-    let rate: Double
-    let count: Int
-}
-
